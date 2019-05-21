@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Вы не знаете БЭМ, или Почему БЭМ — пережиток прошлого</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide_size_s {
+      padding: 25px 100px 0;
+      font-size: .65em;
+    }
+
+    .link-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .link-preview__link {
+      text-align: center;
+    }
+
+    .code_type_symbol {
+      color: red;
+    }
+
+    .code_type_statement {
+      color: cyan;
+    }
+
+    .code_type_argument {
+      color: orange;
+    }
+  </style>
+</head>
+<body class="shower list" id="shower">
+
+  <header class="caption">
+    <h1>Вы не знаете БЭМ, или Почему БЭМ — пережиток прошлого</h1>
+    <p>Роман Ганин, <a href="https://twitter.com/Realetive">@realetive</a></p>
+  </header>
+
+  <section class="slide clear" style="display: flex; flex-direction: column;">
+    <p class="note" style="margin-top: auto">Цель доклада — не попытка розжига межпарадигмальной розни. Все совпадения с реальными событиями или личностями — правда.</p>
+    <p class="note">Для любителей заговоров — в докладе присутсвуют приёмы НЛП, увеличивающие конверсию и продажу.</p>
+  </section>
+
+  <section class="slide clear" id="cover">
+    <div class="heading">
+      <h2 class="heading__top">Вы не знаете БЭМ,</h2>
+      <h2 class="heading__center">или</h2>
+      <h2 class="heading__bottom">Почему БЭМ — пережиток прошлого</h2>
+    </div>
+    <video class="cover" style="width: 100%; height: 100%; -webkit-clip-path: polygon(60% 0%, 100% 0, 100% 100%, 40% 100%); clip-path: polygon(60% 0%, 100% 0, 100% 100%, 40% 100%); background: #000;" alt="Game Of Thrones you know nothing" src="./img/you-know-nothing.mov" poster="./img/you-know-nothing.jpg" autoplay="" loop="" playsinline=""></video>
+    <video class="cover" style="width: 100%; height: 100%; -webkit-clip-path: polygon(0% 0%, 60% 0, 40% 100%, 0% 100%); clip-path: polygon(0% 0%, 60% 0, 40% 100%, 0% 100%);" alt="Game Of Thrones you know nothing" src="./img/three-eyed-raven.mov" poster="./img/you-know-nothing.jpg" autoplay="" loop="" playsinline=""></video>
+
+    <style>
+      #cover h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      #cover .heading {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-between;
+      }
+
+      #cover .heading__top {
+        text-align: right;
+      }
+
+      #cover .heading__center {
+        text-align: center;
+      }
+
+      #cover .heading__bottom {
+        padding-right: 50%;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>О себе…</h2>
+    <ol>
+      <li class="next"><attr title="Web HyperText Application Technology">WHAT</attr>-разработчик в NevaTrip («авиасеилс» для локального туризма — экскурсии, мероприятия);</li>
+      <li class="next">самозванный БЭМ-евангелист, отвечаю на вопросы страждущих в <a href="tg://resolve?domain=bem_ru">https://t.me/bem_ru</a>, <a href="https://ru.bem.info/forum/">форуме</a> и на <a href="https://toster.ru/tag/bem/questions">Тостере</a>;</li>
+      <li class="next">самоучка с «синдромом самозванца»;</li>
+      <li class="next">дважды «выгорал» на проектах;</li>
+    </ol>
+    <footer class="footer">
+      <p>Попыток «рассказать о БЭМ» было много (но этого оказалось мало). Я хочу ещё раз попробовать объяснить мой путь и моё понимание.</p>
+    </footer>
+  </section>
+
+  <section class="slide">
+    <h2>Доклады, материалы</h2>
+    <div class="columns two">
+      <ol>
+        <li>«Пишем БЭМ правильно» — Игорь Зенич</li>
+      </ol>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/youtu.be-hTmxbJF2Tts.svg" alt="">
+        <a href="https://youtu.be/hTmxbJF2Tts" class="link-preview__link">youtu.be/hTmxbJF2Tts</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Доклады, материалы</h2>
+    <div class="columns two">
+      <ol>
+        <li>«Пишем БЭМ правильно» — Игорь Зенич</li>
+        <li>«CSS-методологии от О до Б» — Алексей Охрименко</li>
+      </ol>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/youtu.be-1VM-vEItVeA.svg" alt="">
+        <a href="https://youtu.be/1VM-vEItVeA" class="link-preview__link">youtu.be/1VM-vEItVeA</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Доклады, материалы</h2>
+    <div class="columns two">
+      <ol>
+        <li>«Пишем БЭМ правильно» — Игорь Зенич</li>
+        <li>«CSS-методологии от О до Б» — Алексей Охрименко</li>
+        <li>«В поисках Стилевого Грааля» — Артур Кенжаев</li>
+      </ol>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/youtu.be-b7vBKp8D0vs.svg" alt="">
+        <a href="https://youtu.be/b7vBKp8D0vs" class="link-preview__link">youtu.be/b7vBKp8D0vs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">«Правильно ли это по БЭМ?»</h2>
+    <footer class="footer">
+      Больше никаких вопросов: «Правильно ли это по БЭМ?»
+    </footer>
+  </section>
+
+  <section class="slide">
+    <h2>«Правильно ли это по БЭМ?»</h2>
+    <p class="next">Вы сами должны разобраться в этом, я лишь покажу несколько неочевидных нюансов.</p>
+    <p class="next">Оспорьте мои утверждения. Вы должны научиться, потому что без <code>БЭМ-стека</code> методология — это не подход, это мышление.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Говорят, что БЭМ — религия…</h2>
+    <figure>
+      <blockquote class="next">
+        <p>БЭМ — не религия!</p>
+      </blockquote>
+      <figcaption class="next">— © <i>апостол</i> Володимир Гриненко, «Житие св. Виталия Харисова и св. Сергия Бережного», глава 12, стих 34:12</figcaption>
+    </figure>
+    <footer class="footer">
+      Я не сотрудник Яндекса и никогда им не был, но я — практикующий БЭМ-стек-разработчик и у меня есть несколько целей:
+    </footer>
+  </section>
+
+  <section class="slide clear" id="red-wedding">
+    <video class="cover" style="width: 100%; height: 100%;" alt="Game Of Thrones Red Wedding" src="./img/red-wedding.mov" poster="./img/red-wedding.jpg" autoplay="" loop="" playsinline=""></video>
+    <!-- <img src="./img/red-wedding.jpg" alt="" class="cover"> -->
+    <style>
+      #red-wedding {
+        background-color: #191002;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>Цели</h2>
+    <ol>
+      <li class="next">«достучаться» до мейнтейнеров БЭМ-методологии (документация непонятна новичкам);</li>
+      <li class="next">предупредить распространение неверного понимания методологии менторами и наставниками;</li>
+      <li class="next">повысить качество кросскомандного кода (един(ственн)ая методология) — с ним и мне может придтись работать.</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Не о …</h2>
+    <ol>
+      <li class="next">не о именовании CSS-классов («много чёрточек», «срань из классов в каждом теге»);</li>
+      <li class="next">не о инкапсуляции стилей;</li>
+      <li class="next">не осуждение других подходов (Atomic Design, SMACSS, OCSS, CSS-in-JS, CSS Modules);</li>
+      <li class="next">не <b>продажа</b> «серебряной пули»;</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>О чём же доклад?</h2>
+    <ol>
+      <li class="next">об одной из 2 проблем программирования (именовании);</li>
+      <li class="next">о использовании CSS-модулей и CSS-in-JS;</li>
+      <li class="next">о организации файлов и структуры проекта;</li>
+    </ol>
+  </section>
+
+  <section class="slide" id="caniuse">
+    <img class="cover" src="./img/caniuse.png" alt="Can I use BEM?">
+    <style>
+      #caniuse { background-color: #f2e8d5; }
+      #caniuse:after { content: none; }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>«Проблема» БЭМ</h2>
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="./img/why-bem-is-bad.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>«Проблема» БЭМ</h2>
+    <figure>
+      <blockquote>
+        <p>Почему БЭМ так слабо «отвечает» современным требованиям веб-разработки?</p>
+      </blockquote>
+      <figcaption>
+        <span class="next">Потому что на вопросы отвечают те, кто мыслит в абсолютно другой плоскости и другими понятиями.</span>
+        <!-- <span class="next">БЭМ – такой же подход, как и ООП или ФП, только на другом уровне — Файловой Системе.</span> -->
+        <!-- <span class="next">БЭМ — это паттерн проектирования более высокого уровня (как «Абстрактная фабрика», которая состоит из «Фабричных методов»).</span> -->
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>«Проблема» БЭМ</h2>
+    <figure>
+      <blockquote>
+        <p>Хьюстон, у нас проблема…</p>
+      </blockquote>
+      <figcaption>
+        <p class="next">Как Реакт без:</p>
+        <div class="columns two">
+          <ul>
+            <li class="next">без туториалов,</li>
+            <li class="next">учебников,</li>
+            <li class="next">обучающих уроков на Youtube,</li>
+            <li class="next">статей на Medium,</li>
+          </ul>
+          <ul>
+            <li class="next">лекций,</li>
+            <li class="next">докладов</li>
+            <li class="next">и Дэна Абрамова.</li>
+          </ul>
+        </div>
+      </figcaption>
+    </figure>
+    <footer class="footer">
+      Нам подарили технологию (абсолютное знание), но не объяснили, как достичь просветления.
+      Представьте, если бы нам дали Реакт, но из всего материала — только официальная документация с материалами первых 2-х лет, описывающих основную концепцию
+        (без туториалов,
+        учебников,
+        обучающих уроков на Youtube,
+        статей на Medium,
+        лекций,
+        докладов
+        и Дэна Абрамова).
+      Подобная история, кажется, творится в мире EmberJS — у них всё было хорошо до Vue.js.
+    </footer>
+  </section>
+
+  <section class="slide">
+    <h2>Словарь</h2>
+    <figure>
+      <blockquote>
+        <p>У блока не должно быть «внешней» геометрии…</p>
+      </blockquote>
+      <figcaption class="next">
+        Внешние отступы и позиционирование навязаны внешним блоком (элементами), самому блоку «знать» об этом ни к чему (Абсолютно Независимый Блок).
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Словарь</h2>
+    <figure>
+      <blockquote>
+        <p>Блок — самостоятельная сущность, элемент может существовать только внутри блока…</p>
+      </blockquote>
+      <figcaption class="next">
+        <p>Зависимые компоненты (элементы) не «болтаются» по всей Файловой системе, а лежат внутри блока.</p>
+        <!-- <p>Логика разных сущностей изолирована друг от друга.</p> -->
+      </figcaption>
+    </figure>
+    <!-- <p class="note next">
+      Вроде как и объяснил,<br>
+      но всё равно понятнее не стало («зачем?», «как?»), да?
+    </p> -->
+  </section>
+
+  <section class="slide">
+    <h2>Ча.Во (Тостер, канал, форум)</h2>
+    <ol>
+      <li class="next">Правильно ли это по БЭМ?</li>
+      <li class="next">Как стилизовать <i>такой</i> блок?</li>
+      <li class="next">Как давать классы, если большая вложенность?</li>
+      <li class="next">Какие есть примеры БЭМ-вёрстки?..</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Зачем БЭМ?</h2>
+    <ul>
+      <li class="next">правильно организовать структуру <!-- React/Angular/Vue/Svelte/mol/laravel/elm/yii/ --><здесь могла быть реклама вашего любимого <i>компонентного</i> фреймворка>-компонентов<!--  — вынести элемент в отдельный файл для быстрого доступа и правильного реиспользования -->;</li>
+      <li class="next"><!-- иметь быстрый доступ к логической сущности в  --><code>$EDITOR</code> <!-- по --> → <nobr><code>&#x3C;Ctrl&#x3E; + P</code></nobr><!--  CSS-in-JS в таком случае — лишь вопрос субъективного удобства (Developer eXperience) -->;</li>
+      <li class="next"><!-- обеспечить  -->быстрое понимание структуры вёрстки для нового участника;</li>
+      <li class="next">противоположная задача — «запретить» другим разработчикам повторять хорошие примеры из production-кода;</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Зачем БЭМ?</h2>
+    <figure>
+      <blockquote>
+        <p>Зачем БЭМ, если изоляция решена CSS-in-JS, а на остальное пофиг?</p>
+      </blockquote>
+      <figcaption class="next">
+        <ul>
+          <li class="next">JSDoc / KSS;</li>
+          <li class="next">flow / TypeScript;</li>
+          <li class="next">CSS-in-JS;</li>
+          <li class="next">тесты.</li>
+        </ul>
+      </figcaption>
+    </figure>
+    <footer class="footer">
+      Смысл появления CSS-in-JS вполне закономерен. Раньше документацию писали в отдельном файле, позже появлились формат документирующих комментариев (JSDoc) и это показалось удобным и логичным. Возможно, кто-то придумает способ описания тестов в одном файле с функцией/методом/сущностью — и это тоже будет удобно. Но это не отменяет самой необходимости писать документацию или тесты. Так же и здесь — CSS-in-JS не отменяет БЭМ. А CSS-modules не замена БЭМ, т. к. под кажущейся простотой инкапсуляции мы «упрощаем» понимание кода (а саму проблему инкапсуляции одинаковых именований сущностей между разными проектами решается на БЭМ ещё проще).
+      Да, CSS-in-JS «подарил» нам более декларативный подход к написанию стилей в наших Реактах (не более того), но в БЭМ это уже было (года с 2006, и он ещё более декларативный).
+      Смысл появления CSS-in-JS (styled-components, CSS-modules, etc.) тоже вполне понятен — нам дали классную технологию реализации компонентного подхода, но не объяснили, как разные технологии могут «храниться» в одном компоненте.
+    </footer>
+  </section>
+
+  <section class="slide">
+    <h2>БЭМ-подорожник 🌱</h2>
+    <ul>
+      <li class="next">как разбить сущности на компоненты;</li>
+      <li class="next">как уменьшить дублирование кода (DRY) → больше смысла, но меньше кода;</li>
+      <li class="next">как дизайнеру, верстальщику и JS-разработчику единообразно описать состояния компонентов;</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">Как?</h2>
+  </section>
+<!-- 
+  <section class="slide">
+    <h2>Использование модификаторов «ключ-значение»</h2>
+    <p class="next">«Благодаря» Гари Робертсу мы не знаем о возможности (и необходимости) группировки модификаторов.</p>
+    <p class="next">Это как если бы все руководства по HTML/CSS были бы только на эльфийском языке и появился бы энтузиаст, который перевёл их все на русский, но «забыл» упомянуть про атрибут <code>class</code>, и что его можно использовать как селектор в CSS.</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">Почему?</h2>
+  </section>
+ -->
+  <section class="slide">
+    <h2>«Ключ-значение» (button)</h2>
+    <table class="next">
+      <tr>
+        <th>view</th>
+        <th>type</th>
+        <th>validation</th>
+        <th>width</th>
+        <th>size</th>
+        <th>theme</th>
+      </tr>
+      <tr>
+        <td>primary</td>
+        <td>link</td>
+        <td>error</td>
+        <td>available</td>
+        <td>extra-small</td>
+        <td>light</td>
+      </tr>
+      <tr>
+        <td>secondary</td>
+        <td>button</td>
+        <td>loading</td>
+        <td>full</td>
+        <td>small</td>
+        <td>dark</td>
+      </tr>
+      <tr>
+        <td>warning</td>
+        <td>submit</td>
+        <td>success</td>
+        <td></td>
+        <td>medium</td>
+        <td>on-color</td>
+      </tr>
+      <tr>
+        <td>info</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>large</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>action</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>(xx)x-large</td>
+        <td></td>
+      </tr>
+      <!-- <tr>
+        <td class="next"></td>
+        <td>pseudo</td>
+        <td class="next"></td>
+        <td class="next"></td>
+        <td>xxl(arge)</td>
+        <td class="next"></td>
+      </tr> -->
+    </table>
+    <p class="note next">И «булевые»: <span class="next"><code>hovered</code>,</span> <span class="next"><code>focused</code>,</span> <code class="next">pressed</code> <span class="next">и <code>disabled</code>.</span></p>
+  </section>
+
+  <section class="slide">
+    <h2>«Ключ-значение» (button)</h2>
+    <div class="columns two">
+      <pre>
+        <code>button</code>
+        <code>  _type</code>
+        <code>    _link</code>
+        <code>    _submit</code>
+      </pre>
+      <pre class="next">
+        <code>{</code>
+        <code>  button: {</code>
+        <code>    type: 'link',</code>
+        <code>    type: <mark>'sumbit'</mark></code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Только булевые модификаторы</h2>
+    <p>
+      button
+        <span class="next">button--action</span>
+        <span class="next">button--block</span>
+        <span class="next">button--button</span>
+        <span class="next">button--dark</span>
+        <span class="next">button--error</span>
+        <span class="next">button--focused</span>
+        <span class="next">button--hovered</span>
+        <span class="next">button--info</span>
+        <span class="next">button--large</span>
+        <span class="next">button--light</span>
+        <span class="next">button--link</span>
+        <span class="next">button--loading</span>
+        <span class="next">button--medium</span>
+        <span class="next">button--pressed</span>
+        <span class="next">button--primary</span>
+        <span class="next">button--pseudo</span>
+        <span class="next">button--secondary</span>
+        <span class="next">button--shrink</span>
+        <span class="next">button--small</span>
+        <span class="next">button--submit</span>
+        <span class="next">button--success</span>
+        <span class="next">button--warning</span>
+    </p>
+  </section>
+
+  <section class="slide clear" id="tommen-window">
+    <video class="cover" style="width: 100%; height: 100%;" alt="Game Of Thrones Tommen window" src="./img/tommen-window.mov" poster="./img/tommen-window.jpg" autoplay="" loop="" playsinline=""></video>
+    <!-- <img src="./img/tommen-window.jpg" alt="" class="cover"> -->
+    <style>
+      #tommen-window {
+        background-color: #000;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>«Ниасилил»</h2>
+    <div class="columns two">
+      <ul>
+        <li>ABEM. A more useful adaptation of BEM от Daniel Tonon на CSS-TRICKS</li>
+      </ul>
+      <p>
+        css-tricks.com/abem-useful-adaptation-bem
+      </p>
+    </div>
+    <p class="note">Неправильное понимание «порождает» нерабочие адаптации.</p>
+  </section>
+
+  <section class="slide">
+    <h2>«Ниасилил»</h2>
+    <div class="columns two">
+      <ul>
+        <li>Battling BEM CSS: 10 Common Problems And How To Avoid Them от David Berner на Smashing Magazine</li>
+      </ul>
+      <p>
+        www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/
+      </p>
+    </div>
+    <p class="note">Неправильное понимание «порождает» нерабочие адаптации.</p>
+  </section>
+
+  <section class="slide">
+    <h2>«Ниасилил»</h2>
+    <div class="columns two">
+      <ul>
+        <li>Fifty Shades of BEM от Kaelig в личном блоге</li>
+      </ul>
+      <p>
+        blog.kaelig.fr/post/48196348743/fifty-shades-of-bem
+      </p>
+    </div>
+    <p class="note">Неправильное понимание «порождает» нерабочие адаптации.</p>
+    <p class="note next">NB! <code>js</code>/<code>l(ayout)</code>/<code>c(omponent)</code>-префиксы не нужны ¯\_(ツ)_/¯</p>
+  </section>
+
+  <section class="slide clear" id="king-night">
+    <video class="cover" style="width: 100%; height: 100%;" alt="Game Of Thrones Knight GIF" src="./img/king-night.mp4" poster="./img/night-king.jpg" autoplay="" loop="" playsinline=""></video>
+    <!-- <img src="./img/night-king.jpg" alt="" class="cover"> -->
+    <style>
+      #king-night {
+        background-color: #4a697e;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">DDD —<br>Data Driven Development</span></h2>
+  </section>
+
+  <section class="slide clear" id="arya-candle">
+    <video class="cover" style="width: 100%; height: 100%;" alt="Game Of Thrones Arya candle" src="./img/arya-candle.mov" poster="./img/arya-candle.jpg" autoplay="" loop="" playsinline=""></video>
+    <!-- <img src="./img/arya-candle.jpg" alt="" class="cover"> -->
+    <style>
+      #arya-candle {
+        background-color: #000;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2>DDD - Data driven development</h2>
+    <ol>
+      <li class="next">Представить интерфейс как <i>структуру</i> <b>данных</b>;</li>
+      <li class="next">Дать осмысленные имена (блоки, элементы);</li>
+      <li class="next">Описать состояния (модификаторы).</li>
+      <li class="next">Перенести эту структуру в вёрстку.</li>
+      <li class="next">???</li>
+      <li class="next">PROFIT!!!</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Организация формы</h2>
+    <p>У формы (блок) есть поля (элементы), но у них (input, select, checkbox/switcher, radio) разное API. </p>
+  </section>
+
+  <section class="slide clear slide_size_s">
+    <div class="columns two">
+      <div class="example">
+        <img src="./img/form.png" alt="">
+      </div>
+      <pre>
+        <code class="next">form:</code>
+        <code class="next">  - header</code>
+        <code class="next">  - field</code>
+        <code class="next">  - field:</code>
+        <code class="next">    - focus</code>
+        <code class="next">    - required</code>
+        <code class="next">  - [field, field, …]</code>
+        <code class="next">  - field:</code>
+        <code class="next">    - validation: Error message</code>
+        <code class="next">  - reset</code>
+        <code class="next">  - submit:</code>
+        <code class="next">    - disabled</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide clear" id="bran-stark">
+    <video class="cover" style="width: 100%; height: 100%;" alt="Game Of Thrones Arya candle" src="./img/bran-stark.mov" poster="./img/bran-stark.png" autoplay="" loop="" playsinline=""></video>
+    <!-- <img src="./img/bran-stark.jpg" alt="" class="cover"> -->
+    <style>
+      #bran-stark {
+        background-color: #000;
+      }
+    </style>
+  </section>
+
+  <section class="slide clear slide_size_s">
+    <div class="columns two">
+      <pre>
+        <code>form:</code>
+        <code> </code>
+        <code>  - header</code>
+        <code>  - field</code>
+        <code>  - field:</code>
+        <code> </code>
+        <code>    - focus</code>
+        <code>    - required</code>
+        <code>  - [field, field, …]</code>
+        <code>  - field:</code>
+        <code> </code>
+        <code>    - validation: Error message</code>
+        <code>  - reset</code>
+        <code>  - submit:</code>
+        <code> </code>
+        <code>    - disabled</code>
+      </pre>
+      <pre class="next">
+        <code>block: form</code>
+        <code>content:</code>
+        <code>  - elem: header</code>
+        <code>  - elem: field</code>
+        <code>  - elem: field</code>
+        <code>    elemMods:</code>
+        <code>      - focus: true</code>
+        <code>      - required: true</code>
+        <code>  - [elem, elem, …]</code>
+        <code>  - elem: field</code>
+        <code>    elemMods:</code>
+        <code>      - validation: Error message</code>
+        <code>  - elem: reset</code>
+        <code>  - elem: submit</code>
+        <code>    mods:</code>
+        <code>      - disabled: true</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide clear">
+    <div class="columns two">
+      <pre>
+        <code>block: form</code>
+        <code>content:</code>
+        <code>  - elem: header</code>
+      </pre>
+      <pre class="next">
+        <pre>
+        <code>elem: header</code>
+        <code>content:</code>
+        <code>  elem: title</code>
+        <code>  content:</code>
+        <code>    block: heading</code>
+        <code>    content: Заголовок формы</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide clear">
+    <div class="columns two">
+      <pre>
+        <code>- elem: field</code>
+        <code>- elem: field</code>
+        <code>  elemMods:</code>
+        <code>    - focus: true</code>
+        <code>    - required: true</code>
+        <code>- [elem, elem, …]</code>
+        <code>- elem: field</code>
+        <code>  elemMods:</code>
+        <code>    - validation: Error message</code>
+      </pre>
+      <pre class="next">
+        <pre>
+        <code>elem: body</code>
+        <code>content:</code>
+        <code>  - elem: field</code>
+        <code>  - elem: field</code>
+        <code>    elemMods:</code>
+        <code>      - focus: true</code>
+        <code>      - required: true</code>
+        <code>  - elem: field</code>
+        <code>    elemMods:</code>
+        <code>      - validation: Error message</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide clear">
+    <div class="columns two">
+      <pre>
+        <code>- reset</code>
+        <code>- submit:</code>
+        <code>  - disabled</code>
+      </pre>
+      <pre class="next">
+        <pre>
+        <code>elem: footer</code>
+        <code>content:</code>
+        <code>  - reset</code>
+        <code>  - submit:</code>
+        <code>    - disabled</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <pre>
+      <code><span class="code_type_statement">const</span> form = <span class="code_type_argument">this</span>;</code>
+      <code> </code>
+      <code><span class="comment">// Если ни одно поле…</span></code>
+      <code>form.mods.validation <span class="code_type_symbol">=</span> form.fields.includes( <span class="code_type_argument">field</span> <span class="code_type_statement">=></span> <span class="code_type_symbol">!</span>(</code>
+      <code>  field.mods.validation <span class="code_type_symbol">||</span> <span class="comment">// не содержит ошибок валидации…</span></code>
+      <code>  field.mods.required <span class="code_type_symbol">&&</span> <span class="code_type_symbol">!</span>field.val <span class="comment">// и заполнены *-поля</span></code>
+      <code>) ) <span class="code_type_symbol">?</span> <span class="code_type_argument">'success'</span> <span class="code_type_symbol">:</span> <span class="code_type_argument">'error'</span>;</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <p>
+      Я не использовал ни одного тега, обозначающего поле (input, select, checkbox/switcher, radio), но описал компонент, который можно:
+    </p>
+    <ul>
+      <li class="next">использовать с любым типом поля;</li>
+      <li class="next">перенести в другой проект (вместе со стилями, логикой, документацией);</li>
+      <li class="next">точечно рефакторить;</li>
+      <li class="next"><code>form</code> не работает с данными, только с валидацией (+ отправка), а вот модификация формы (например, <code>form_view_login</code> или <code>form_view_restore-password</code>) — вполне.</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <p>Верстальщик (HTML + CSS) на уровне вёрстки закладывает логику (JS) с помощью разметки (классов, атрибутов), а разработчик (JS) управляет ею, меняя очевидные стуктуры (классы и атрибуты) — если использовать <b>понятные</b> имена, мы получаем частично самодокументируемый код.</p>
+  </section>
+<!-- 
+  <section class="slide">
+    <h2>HTML Academy</h2>
+    <p>Попробуем разобрать макеты HTML Academy по БЭМ:</p>
+    <h3>Барбершоп</h3>
+  </section>
+
+  <section class="slide">
+    <h2>HTML Academy</h2>
+    <p>Попробуем разобрать макеты HTML Academy по БЭМ:</p>
+    <h3>Барбершоп</h3>
+  </section>
+
+  <section class="slide">
+    <h2>HTML Academy</h2>
+    <p>Попробуем разобрать макеты HTML Academy по БЭМ:</p>
+    <h3>Барбершоп</h3>
+  </section>
+ -->
+  <section class="slide">
+    <h2 class="shout shrink">
+      Что дальше?
+    </h2>
+  </section>
+
+  <section class="slide">
+    <h2>Что дальше?</h2>
+    <div class="columns two">
+      <ul>
+        <li>project-stub — не «production-ready», а демонстрация концепции (не стоит использовать для старта проекта как замена starter-kit).</li>
+      </ul>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/project-stub.svg" alt="">
+        <a style="font-size: .6em;" href="https://github.com/bem/project-stub" class="link-preview__link">github.com/bem/project-stub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Что дальше?</h2>
+    <div class="columns two">
+      <ul>
+        <li value="2">XJST-песочница — демонстрация работы шаблонизатора «данные → вёрстка» (JavaScript/NodeJS), помогает почувствовать «БЭМ-подход» на простых примерах.</li>
+      </ul>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/bem-xjst.svg" alt="">
+        <a style="font-size: .6em;" href="https://bem.github.io/bem-xjst" class="link-preview__link">bem.github.io/bem-xjst</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Что дальше?</h2>
+    <div class="columns two">
+      <ul>
+        <li value="3">bem-express — project-stub «на стероидах»: BEMTREE-шаблонизатор, LiveReload, Express.js (очень быстрый, но тоже не «production-ready»).</li>
+      </ul>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/bem-express.svg" alt="">
+        <a style="font-size: .6em;" href="https://github.com/bem/bem-express" class="link-preview__link">github.com/bem/bem-express</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Что дальше?</h2>
+    <div class="columns two">
+      <ul>
+        <li value="4">bem-react — набор утилит для разработки пользовательских интерфейсов по БЭМ-методологии на React (+ TypeScript и Flow) с реализацией «уровней переопределения» (с помощью dependency injection).</li>
+      </ul>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/bem-react.svg" alt="">
+        <a style="font-size: .6em;" href="http://bem.github.io/bem-react" class="link-preview__link">bem.github.io/bem-react</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Что дальше?</h2>
+    <div class="columns two">
+      <ul>
+        <li value="5">reshadow — CSS-in-JS и CSS-модули в «одном флаконе» для React, Preact, Vue, htm.</li>
+      </ul>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/reshadow.svg" alt="">
+        <a style="font-size: .6em;" href="https://github.com/lttb/reshadow" class="link-preview__link">github.com/lttb/reshadow</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide clear">
+    <h2 class="shout shrink">
+      БЭМ нетрудно понять, но гораздо сложнее объяснить.
+    </h2>
+  </section>
+
+  <section class="slide clear" style="color: white">
+    <img src="./img/hodor.jpg" alt="" class="cover">
+    <h2>Ходор?</h2>
+    <div class="columns two">
+      <p>Twitter, GitHub, Telegram, почта, VKontakte, Facebook и т. д.: @realetive</p>
+      <div class="link-preview">
+        <img  class="link-preview__code" src="./img/qr-code/lecture-you-dont-know-bem.svg" alt="">
+        <a style="font-size: .6em; color: #fff;" href="https://github.com/Realetive/lecture-you-dont-know-bem/" class="link-preview__link">github.com/Realetive/lecture-you-dont-know-bem</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="badge">
+    <a href="https://github.com/Realetive/lecture-you-dont-know-bem/">Слайды на GitHub</a>
+  </footer>
+
+  <div class="progress"></div>
+
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2019 Roman Ganin -->
+
+</body>
+</html>
